@@ -5,8 +5,7 @@
     
         <div class="breadcrumb">
             <ul>
-                <li><a href="#">System Setting</a></li>
-                <li>General Setting</li>
+                <li><a href="#">User Profile</a></li>
             </ul>
         </div>
     <div class="separator-breadcrumb border-top"></div>

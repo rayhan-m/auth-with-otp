@@ -29,17 +29,17 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        @php
-                                                            $count=1;
-                                                        @endphp
-                                                        @foreach ($users as $item)
+                                                    @php
+                                                        $count=1;
+                                                    @endphp
+                                                    @foreach ($users as $item)
+                                                        <tr>
                                                             <th scope="row">{{ $count++ }}</th>
                                                             <td>{{$item->name}}</td>
                                                             <td><img class="rounded-circle m-0 avatar-sm-table" src="{{ file_exists(@$item->image) ? asset($item->image) : asset('public/backend/uploads/staff/customer.png') }}" alt="" /></td>
                                                             <td>{{$item->phone}}</td>
-                                                        @endforeach
-                                                    </tr>
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
