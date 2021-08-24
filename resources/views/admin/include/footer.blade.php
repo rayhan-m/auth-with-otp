@@ -4,7 +4,7 @@
             
             <div class="app-footer">
                 <div class="footer-bottom border-top pt-3 d-flex flex-column flex-sm-row align-items-center">
-                     {{-- <img style="height:40px; width:140px;" class="logo" src="{{asset('/')}}{{$setting->logo}}" alt=""> --}}
+                     <img style="height:40px; width:140px;" class="logo" src="{{asset('/')}}{{getSetting()->logo}}" alt="">
                     <span class="flex-grow-1"></span>
                     <div class="d-flex align-items-center">
                         <div>

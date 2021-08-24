@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\MilkBuyer;
 use App\GeneralSetting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -103,6 +104,7 @@ class GeneralSettingController extends Controller
             'image' => 'required',
         ]);
         $profile = User::find(Auth::user()->id);
+        $milk_buyer = MilkBuyer::where('user_id',Auth::user()->id)->first();
         // $file_path= $general_setting->logo;
         // unlink($file_path);
         $image = "";
@@ -111,6 +113,11 @@ class GeneralSettingController extends Controller
             $image = md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
             $file->move('public/backend/uploads/staff/', $image);
             $image = 'public/backend/uploads/staff/' . $image;
+            if (Auth::user()->role_id == 2) {
+                $milk_buyer->image = $image;
+                $milk_buyer->save();
+
+            }
             $profile->image = $image;
         }
         $profile->save();

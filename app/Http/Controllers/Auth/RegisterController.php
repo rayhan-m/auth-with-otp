@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\MilkBuyer;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -74,9 +75,16 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'phone' => $data['phone'],
-            'password' => Hash::make($data['password']),
+            'password' => hash('sha256', $data['password']),
+            // 'password' => Hash::make($data['password']),
             'verification_code' => rand(100000, 999999)
         ]);
+
+        $milk_buyer = new MilkBuyer();
+        $milk_buyer->name = $data['name'];
+        $milk_buyer->phone = $data['phone'];
+        $milk_buyer->user_id = $user->id;
+        $milk_buyer->save();
 
         $otpController = new OTPVerificationController;
         $otpController->send_code($user);

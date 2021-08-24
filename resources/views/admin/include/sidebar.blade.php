@@ -4,6 +4,57 @@
         <ul class="metismenu" id="menu">
             @if (Auth::user()->role_id == 1)
                 <li class="Ul_li--hover"><a href="{{route('admin.dashboard')}}"><ion-icon class="text-20 mr-2 text-muted" name="speedometer-outline"></ion-icon><span class="item-name text-15 text-muted"> Dashboard</span></a></li>
+                <li class="Ul_li--hover"><a class="has-arrow" href="#"><i class="fa fa-paw text-20 mr-2" aria-hidden="true"></i><span class="item-name text-15 text-muted">Cows</span></a>
+                        <ul class="mm-collapse">
+                            <li class="item-name"><a href="{{route('seller')}}"><i class="nav-icon i-Width-Window"></i><span class="item-name">Seller</span></a></li>
+                            <li class="item-name"><a href="{{route('buyer')}}"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Buyer</span></a></li>
+                            <li class="item-name"><a href="{{route('bread')}}"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Bread</span></a></li>
+                            <li class="item-name"><a href="{{route('cow_list')}}"><i class="nav-icon i-Width-Window"></i><span class="item-name">Cow List</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="Ul_li--hover"><a class="has-arrow" href="#"><i class="fa fa-hourglass-start text-20 mr-2" aria-hidden="true"></i><span class="item-name text-15 text-muted">Milk Store</span></a>
+                        <ul class="mm-collapse">
+                            <li class="item-name"><a href="{{route('collect_milk')}}"><i class="nav-icon i-Width-Window"></i><span class="item-name">Collect Milk</span></a></li>
+                            <li class="item-name"><a href="{{route('milk_buyer')}}"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Milk Buyer</span></a></li>
+                            <li class="item-name"><a href="{{route('sell_milk')}}"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Sell Milk</span></a></li>
+                            <li class="item-name"><a href="{{route('milk_stock')}}"><i class="nav-icon i-Width-Window"></i><span class="item-name">Milk Stock</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="Ul_li--hover"><a class="has-arrow" href="#"><ion-icon class="text-20 mr-2 text-muted" name="server-outline"></ion-icon><span class="item-name text-15 text-muted">Foods</span></a>
+                        <ul class="mm-collapse">
+                            <li class="item-name"><a href="{{route('food.category')}}"><i class="nav-icon i-Width-Window"></i><span class="item-name">Food Category</span></a></li>
+                            <li class="item-name"><a href="{{route('food')}}"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Foods</span></a></li>
+                            <li class="item-name"><a href="{{route('buy_food')}}"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Buy Food</span></a></li>
+                            <li class="item-name"><a href="{{route('feed_food')}}"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Feed Food</span></a></li>
+                            <li class="item-name"><a href="{{route('food_stock')}}"><i class="nav-icon i-Duplicate-Window"></i><span class="item-name">Food Stock</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="Ul_li--hover"><a class="has-arrow" href="#"><ion-icon class="text-20 mr-2 text-muted" name="person-add-outline"></ion-icon><span class="item-name text-15 text-muted">Human Resource</span></a>
+                        <ul class="mm-collapse">
+                        <li class="item-name"><a href="{{route('staff_list')}}"><i class="i-Computer-Secure text-20 mr-2 text-muted"></i><span class="item-name">Staff List</span></a></li>
+                        <li class="item-name"><a href="{{route('add_staff')}}"><i class="i-Computer-Secure text-20 mr-2 text-muted"></i><span class="item-name">Add Staff</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="Ul_li--hover"><a class="has-arrow" href="#"><ion-icon class="text-20 mr-2 text-muted" name="git-branch-outline"></ion-icon><span class="item-name text-15 text-muted">Payment</span></a>
+                        <ul class="mm-collapse">
+                            <li class="item-name"><a href="{{route('milk_payment')}}"><i class="nav-icon i-Receipt-4"></i><span class="item-name">Milk Payment</span></a></li>
+                            <li class="item-name"><a href="{{route('staff_payment')}}"><i class="nav-icon i-Receipt-4"></i><span class="item-name">Staff payment</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="Ul_li--hover"><a class="has-arrow" href="#"><ion-icon class="text-20 mr-2 text-muted" name="git-branch-outline"></ion-icon><span class="item-name text-15 text-muted">Expenses</span></a>
+                        <ul class="mm-collapse">
+                        <li class="item-name"><a href="{{route('expense_type')}}"><i class="nav-icon i-File-Clipboard-Text--Image"></i><span class="item-name">Expense Type</span></a></li>
+                        <li class="item-name"><a href="{{route('expenses')}}"><i class="nav-icon i-File-Clipboard-Text--Image"></i><span class="item-name">Expense List</span></a></li>
+                    </ul>
+                </li>
+                <li class="Ul_li--hover"><a class="has-arrow" href="#"><ion-icon class="text-20 mr-2 text-muted" name="reader-outline"></ion-icon><span class="item-name text-15 text-muted">Reports</span></a>
+                    <ul class="mm-collapse">
+                        <li class="item-name"><a href="{{route('sell_report_search')}}"><i class="nav-icon i-File-Clipboard-Text--Image"></i><span class="item-name">Milk Sell Report</span></a></li>
+                        <li class="item-name"><a href="{{route('cow_sell_report_search')}}"><i class="nav-icon i-File-Clipboard-Text--Image"></i><span class="item-name">Cow Sell Report</span></a></li>
+                        <li class="item-name"><a href="{{route('expense_report_search')}}"><i class="nav-icon i-File-Clipboard-Text--Image"></i><span class="item-name">Expense Report</span></a></li>
+                        <li class="item-name"><a href="{{route('income_summery_search')}}"><i class="nav-icon i-File-Clipboard-Text--Image"></i><span class="item-name">Income Summery</span></a></li>
+                    </ul>
+                </li>
                 <li class="Ul_li--hover"><a class="has-arrow"><ion-icon class="text-20 mr-2 text-muted" name="build-outline"></ion-icon><span class="item-name text-15 text-muted">System Setting</span></a>
                     <ul class="mm-collapse">
                         <li class="item-name"><a href="{{route('general_setting')}}"><i class="nav-icon i-Error-404-Window"></i><span class="item-name">General Setting</span></a></li>
@@ -12,10 +63,12 @@
                         <li class="item-name"><a href="{{route('smsSetting')}}"><i class="nav-icon i-Error-404-Window"></i><span class="item-name">SMS Setting</span></a></li>
                     </ul>
                 </li>
-            @else
-                <li class="Ul_li--hover"><a href="{{route('customer.dashboard')}}"><ion-icon class="text-20 mr-2 text-muted" name="speedometer-outline"></ion-icon><span class="item-name text-15 text-muted"> Dashboard</span></a></li>
-            @endif
-        </ul>
+                @else
+                    <li class="Ul_li--hover"><a href="{{route('customer.dashboard')}}"><ion-icon class="text-20 mr-2 text-muted" name="speedometer-outline"></ion-icon><span class="item-name text-15 text-muted"> Dashboard</span></a></li>
+                    <li class="Ul_li--hover"><a href="{{route('sell_milks')}}"><i class="fa fa-hourglass-start text-20 mr-2" aria-hidden="true"></i><span class="item-name">Milk Buy Details</span></a></li>
+                    <li class="Ul_li--hover"><a href="{{route('milk_payments')}}"><ion-icon class="text-20 mr-2 text-muted" name="git-branch-outline"></ion-icon><span class="item-name text-15 text-muted"> Milk Payment</span></a></li>
+                @endif
+            </ul>
     </div>
 </div>
 <div class="ps__rail-x" style="left: 0px; bottom: 0px;">

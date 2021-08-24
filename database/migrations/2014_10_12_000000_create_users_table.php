@@ -34,7 +34,7 @@ class CreateUsersTable extends Migration
         });
 
         $user =new User();
-         $user->role_id= '1';
+        $user->role_id= '1';
         $user->name="Super Admin";
         $user->email="admin@gmail.com";
         $user->password=bcrypt('12345678');
