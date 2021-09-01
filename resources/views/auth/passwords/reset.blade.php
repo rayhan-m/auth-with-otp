@@ -36,7 +36,8 @@
 
                             <div class="form-group">
                                 <input id="phone_no" type="number" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ $email ?? old('phone') }}" placeholder="Phone" required autofocus>
-                                    <p class="text-danger phone_no"></p>
+                                <p class="_custom_error_message text-danger phone-message"></p>
+
 
                                 @if ($errors->has('phone'))
                                     <span class="invalid-feedback" role="alert">
@@ -82,3 +83,5 @@
     </div>
 </div>
 @endsection
+<script src="{{ asset('public/backend/js/plugins/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('public/backend/js/custom.js') }}"></script>

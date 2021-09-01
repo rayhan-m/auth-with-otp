@@ -47,7 +47,8 @@
                             <div class="form-group">
                                 <label for="phone">Phone No *</label>
                                 <input id="phone_no" type="text" class="form-control-rounded form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
-                                <p class="_custom_error_message text-danger phone_no"></p>
+                                <p class="_custom_error_message text-danger phone-message"></p>
+
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

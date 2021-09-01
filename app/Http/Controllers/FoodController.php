@@ -13,16 +13,14 @@ class FoodController extends Controller
 {
     public function FoodStock()
     {
-        $food_stocks=FoodStock::join('foods','food_stocks.food_id','=','foods.id')->where('foods.active_status',1)->get();
+        $food_stocks=FoodStock::join('food','food_stocks.food_id','=','food.id')->where('food.active_status',1)->get();
         
         return view('admin.food_stock',compact('food_stocks'));
     }
 
     public function FoodList()
     {
-        $data = Food::Join('food_categories', 'foods.category_id', '=', 'food_categories.id')
-        ->select('foods.id','foods.category_id','foods.name','foods.details','foods.image','foods.active_status','food_categories.name as category_name')
-        ->get();
+        $data = Food::all();
         $categories = FoodCategory::where('active_status',1)->get();
         return view('admin.food_list', compact('data','categories'));
     }

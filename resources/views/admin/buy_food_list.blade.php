@@ -42,7 +42,7 @@
                             <tr>
                                 <td>{{ $count++ }}</td>
                                 <td>#{{$item->food_id}}</td>
-                                <td>{{$item->name}}</td>
+                                <td>{{$item->foodName->name}}</td>
                                 <td>{{$item->buy_date}}</td>
                                 <td>{{$item->price}}</td>
                                 <td>{{$item->quantity}}</td>

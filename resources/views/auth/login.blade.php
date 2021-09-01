@@ -44,7 +44,8 @@
                         @csrf
                             <div class="form-group">
                                 <label for="phone">Phone No</label>
-                                <input id="phone" type="text" class="form-control-rounded form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+                                <input id="phone_no" type="text" class="form-control-rounded form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+                                <p class="_custom_error_message text-danger phone-message"></p>
 
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
@@ -77,3 +78,5 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('public/backend/js/plugins/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('public/backend/js/custom.js') }}"></script>

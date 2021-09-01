@@ -164,7 +164,8 @@
                                     <div class="col-lg-3">
                                         <div class="input-effect">
                                             <label>Mobile <span>*</span> </label>
-                                            <input class="primary-input form-control{{ $errors->has('mobile') ? ' is-invalid' : '' }}" onkeypress="return isNumberKey(event)" type="text"  name="mobile" value="{{isset($editData)? @$editData->mobile : '' }}">
+                                            <input id="phone_no" class="primary-input form-control{{ $errors->has('mobile') ? ' is-invalid' : '' }}" onkeypress="return isNumberKey(event)" type="text"  name="mobile" value="{{isset($editData)? @$editData->mobile : '' }}">
+                                            <p class="_custom_error_message text-danger phone-message"></p>
                                             <span class="focus-border"></span>
                                             @if ($errors->has('mobile'))
                                             <span class="invalid-feedback" role="alert">

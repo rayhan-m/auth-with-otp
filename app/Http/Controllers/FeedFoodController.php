@@ -17,8 +17,13 @@ class FeedFoodController extends Controller
 {
     public function index()
     {
-        $feed_foods=FeedFood::all();
-        return view('admin.feed_food_list',compact('feed_foods'));
+        try {
+            //code...
+            $feed_foods=FeedFood::all();
+            return view('admin.feed_food_list',compact('feed_foods'));
+        } catch (\Throwable $th) {
+            dd( $th);
+        }
     }
 
     public function create()
@@ -91,6 +96,7 @@ class FeedFoodController extends Controller
 
     public function FeedFoodStockUpdated($id)
     {
+        
         DB::beginTransaction();
         $feed_food = FeedFood::findOrfail($id);
         $feed_food->active_status = 1;

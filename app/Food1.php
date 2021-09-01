@@ -2,12 +2,16 @@
 
 namespace App;
 
-use App\FoodCategory;
 use Illuminate\Database\Eloquent\Model;
 
 class Food extends Model
 {
-    public function category()
+    /**
+     * Get the user that owns the Food
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category(): BelongsTo
     {
         return $this->belongsTo(FoodCategory::class, 'category_id', 'id');
     }

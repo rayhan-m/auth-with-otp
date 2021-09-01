@@ -87,7 +87,9 @@
         <main>
             @yield('content')
         </main>
+        
     </div>
-    
+    <script src="{{ asset('public/backend/js/plugins/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('public/backend/js/custom.js') }}"></script>
 </body>
 </html>

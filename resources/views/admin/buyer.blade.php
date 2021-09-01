@@ -84,7 +84,8 @@
                                                                     <div class="input-effect mt-20">
                                                                         <label>Phone *</label>
                                                                         <input class="primary-input date form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}"  type="text" onkeypress="return isNumberKey(event)"
-                                                                        name="phone"  value="{{@$item->phone}}" autocomplete="off">
+                                                                        name="phone" id="phone_no_edit"  value="{{@$item->phone}}" autocomplete="off">
+                                                                        <p class="_custom_error_message text-danger phone-message_edit"></p>
                                                                         <span class="focus-border"></span>
                                                                         @if ($errors->has('phone'))
                                                                         <span class="invalid-feedback" role="alert">
@@ -208,7 +209,9 @@
                                     <div class="input-effect mt-20">
                                         <label>Phone *</label>
                                         <input class="primary-input date form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}"  type="text"
-                                        name="phone" autocomplete="off">
+                                        name="phone" id="phone_no" autocomplete="off">
+                                        <p class="_custom_error_message text-danger phone-message"></p>
+
                                         <span class="focus-border"></span>
                                         @if ($errors->has('phone'))
                                         <span class="invalid-feedback" role="alert">

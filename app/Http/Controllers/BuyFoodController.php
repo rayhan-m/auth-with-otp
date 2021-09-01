@@ -17,10 +17,7 @@ class BuyFoodController extends Controller
     {
         $foods = Food::where('active_status',1)->get();
         // $buy_foods = BuyFood::join('foods', 'buy_foods.food_id','=','foods.id')->get();
-        $buy_foods=  DB::table('buy_foods')
-        ->Join('foods', 'buy_foods.food_id','=','foods.id')
-        ->select('buy_foods.id','buy_foods.food_id','buy_foods.price','buy_foods.buy_date','buy_foods.quantity','buy_foods.total','buy_foods.voucher','buy_foods.active_status','foods.name')
-        ->get();
+        $buy_foods=  BuyFood::all();
         return view('admin.buy_food_list', compact('foods','buy_foods'));
     }
 

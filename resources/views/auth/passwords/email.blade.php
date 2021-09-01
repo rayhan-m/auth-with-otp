@@ -35,6 +35,7 @@
                             @csrf
                             <div class="form-group">
                                 <input id="phone_no" type="number" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required placeholder="Phone">
+                                <p class="_custom_error_message text-danger phone-message"></p>
                                
                                 @if ($errors->has('phone'))
                                     <span class="invalid-feedback" role="alert">
@@ -58,3 +59,4 @@
     </div>
 </div>
 @endsection
+

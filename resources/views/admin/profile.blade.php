@@ -64,7 +64,7 @@
                                 <li class="col-sm-12">
                                 <label>Phone No
                                     <input type="text" id="phone_no"  value="{{ @$profile->phone }}" class="form-control" name="phone" placeholder="">
-                                    <p class="text-danger phone_no"></p>
+                                    <p class="_custom_error_message text-danger phone-message"></p>
                                     
                                 </label>
                                 </li>

@@ -36,33 +36,24 @@
     {{-- <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script> --}}
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     
-    <script src="{{ asset('public/backend/js/custom.js') }}"></script>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-     <script>
-        $(document).ready(function () {
-
-            $('#calendar').fullCalendar({
-
-        })
-    });
-
-    </script>
+    
+    <script src="{{ asset('public/backend/js/custom.js') }}"></script>
     <script>
-$(document).ready(function () {
-   
-var SITEURL = "{{ url('/') }}";
-  
-$.ajaxSetup({
-    headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-  $('#calendar').fullCalendar({});
-  
+        $(document).ready(function () {
+        
+        var SITEURL = "{{ url('/') }}";
+        
+        $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $('#calendar').fullCalendar({});
+        });
 </script>
 
 

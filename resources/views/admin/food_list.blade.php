@@ -41,7 +41,7 @@
                                                     <td>{{ $count++ }}</td>
                                                     <td>{{@$item->id}}</td>
                                                     <td>{{@$item->name}}</td>
-                                                    <td>{{@$item->category_name}}</td>
+                                                    <td>{{@$item->category->name}}</td>
                                                     <td>{{@$item->details}}</td>
                                                     <td>@if (@$item->active_status==1)
                                                         <a href="{{ url('admin/food-deactive/'.@$item->id)}}"> <label class="badge badge-info">Active</label></a>
