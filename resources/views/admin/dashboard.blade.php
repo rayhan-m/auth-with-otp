@@ -10,7 +10,8 @@
                 <div class="separator-breadcrumb border-top"></div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div id='calendar'></div>
+                        {{-- <div id='calendar'></div> --}}
+                        <img src="{{ url('public/backend/images/cow.jpg') }}" alt="">
                     </div>
                     <div class="col-md-6">
                                 <div class="card o-hidden mb-4">
